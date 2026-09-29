@@ -1,0 +1,645 @@
+/* =====================================
+   CÀI ĐẶT CHUNG
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #58645b;
+    line-height: 1.7;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fa,
+            #f2faef
+        );
+}
+
+
+
+/* =====================================
+   PHẦN ĐẦU TRANG
+   ===================================== */
+
+header {
+    text-align: center;
+
+    padding: 55px 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9b7ca,
+            #b9d9ad
+        );
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 17px;
+    opacity: 0.95;
+}
+
+
+
+/* =====================================
+   THANH MENU
+   ===================================== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    color: #68796c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover menu */
+
+nav a:hover {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e1a9bf,
+            #aeca9f
+        );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 12px
+        rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* =====================================
+   NỘI DUNG CHÍNH
+   ===================================== */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+
+
+/* =====================================
+   TRANG CHỦ
+   ===================================== */
+
+.intro {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 50px;
+
+    margin-bottom: 25px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.hello {
+    color: #d889a6;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.intro h2 {
+    color: #77956f;
+
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+.intro-text > p:not(.hello) {
+    margin-bottom: 22px;
+}
+
+
+
+/* =====================================
+   ẢNH ĐẠI DIỆN
+   ===================================== */
+
+.avatar {
+    width: 220px;
+    height: 220px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border: 7px solid #f1cfdd;
+
+    background: #f8e9ee;
+
+    box-shadow:
+        0 7px 20px
+        rgba(0, 0, 0, 0.12);
+
+    transition:
+        all 0.4s ease;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* Hover ảnh */
+
+.avatar:hover {
+    transform: scale(1.04);
+
+    border-color: #b9d5ae;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.16);
+}
+
+.avatar:hover img {
+    transform: scale(1.05);
+}
+
+
+
+/* =====================================
+   NÚT
+   ===================================== */
+
+.button {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dfa8bd,
+            #abc99f
+        );
+
+    transition:
+        all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 7px 18px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* =====================================
+   CÁC KHUNG NỘI DUNG
+   ===================================== */
+
+.card {
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.07);
+}
+
+.card h2 {
+    color: #77956f;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 20px;
+
+    border-bottom:
+        2px solid #f0cfdd;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+
+
+/* =====================================
+   THÔNG TIN CÁ NHÂN
+   ===================================== */
+
+.information {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+.info-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fa,
+            #f2faef
+        );
+
+    border:
+        1px solid #eadfe3;
+
+    transition:
+        all 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 7px 17px
+        rgba(0, 0, 0, 0.09);
+}
+
+.info-icon {
+    font-size: 30px;
+}
+
+.info-box h3 {
+    color: #c17d98;
+
+    font-size: 16px;
+}
+
+.info-box p {
+    margin: 0;
+}
+
+
+
+/* =====================================
+   SỞ THÍCH
+   ===================================== */
+
+.hobbies {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.hobby {
+    text-align: center;
+
+    padding: 25px 15px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff7fa,
+            #f1faed
+        );
+
+    border:
+        1px solid #e8e1e3;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* Hover sở thích */
+
+.hobby:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 9px 20px
+        rgba(0, 0, 0, 0.1);
+}
+
+.hobby-icon {
+    font-size: 40px;
+
+    margin-bottom: 8px;
+}
+
+.hobby h3 {
+    color: #c17d98;
+
+    margin-bottom: 8px;
+}
+
+.hobby p {
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+
+/* =====================================
+   MỤC TIÊU
+   ===================================== */
+
+.goals {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.goal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 17px;
+
+    border-radius: 16px;
+
+    background: #f7fbf5;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* Hover mục tiêu */
+
+.goal:hover {
+    transform: translateX(8px);
+
+    background: #fff2f7;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.07);
+}
+
+.goal-number {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-weight: bold;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dda7bd,
+            #a9c99e
+        );
+}
+
+.goal h3 {
+    color: #77956f;
+
+    margin-bottom: 3px;
+}
+
+.goal p {
+    margin: 0;
+}
+
+
+
+/* =====================================
+   LỜI KẾT
+   ===================================== */
+
+.quote {
+    text-align: center;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff0d8,
+            #f5dce6
+        );
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.06);
+}
+
+.quote p {
+    color: #71816e;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    margin: 0;
+}
+
+
+
+/* =====================================
+   CHÂN TRANG
+   ===================================== */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: white;
+
+    background: #91ad87;
+}
+
+footer p {
+    margin: 3px;
+}
+
+
+
+/* =====================================
+   ĐIỆN THOẠI
+   ===================================== */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+
+        padding: 6px 12px;
+    }
+
+    main {
+        width: 92%;
+
+        margin-top: 25px;
+    }
+
+    .intro {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 30px 20px;
+
+        gap: 25px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+    .information {
+        grid-template-columns: 1fr;
+    }
+
+    .hobbies {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+}
